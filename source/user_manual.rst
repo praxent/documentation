@@ -343,6 +343,8 @@ Recipient Variables allow you to:
 
 .. note:: Recipient variables should be set as a valid JSON-encoded dictionary, where key is a plain recipient address and value is a dictionary with variables.
 
+.. note:: When operating in test mode (o:testmode=true), Mailgun logs will reflect only original template with unpopulated variables. Template variables are only populated in a real message (o:testmode=false).
+
 In the example above, Alice and Bob both will get personalized subject lines "Hey, Alice" and "Hey, Bob" and unique unsubscribe links.
 
 When sent via SMTP, recipient variables can be included by adding the following header to your email, "X-Mailgun-Recipient-Variables: {"my_message_id": 123}".
